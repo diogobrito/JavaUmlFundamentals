@@ -1,22 +1,34 @@
 package br.com.fiap;
-// Not Working!!!
+
 public class Calculator {
-	public static String toBinary(int number){
-		int result = number;
+	public static String toBinary(int entryNumber){
+		int actualValue = entryNumber;
 		String binary = "";
 		
-		if(number == 0){
+		if(entryNumber == 0){
 			binary = "0";
 		}else{
-			while(result > 0){
-				binary = binary + Integer.toString(result % 2);
+			while(actualValue > 0){
+				binary = Integer.toString(actualValue % 2) + binary;
 						
-				result = result / 2;
+				actualValue = actualValue / 2;
 			}
-			
-			binary = binary + "0";
 		}
 		
 		return binary;
+	}
+	
+	public static double calc(double value1, double value2){
+		return 2d;
+	}
+	
+	public static int fatorial(int entryValue){
+		int value = entryValue;
+				
+		for(int i = entryValue - 1; i >= 1; i--){
+			value = value * i;
+		}
+	    				
+		return value;
 	}
 }
