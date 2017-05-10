@@ -78,5 +78,22 @@ public class Main {
 		}else{
 			System.out.println("Tudo certo para fatorial!");
 		}
+		
+		int[] intArray = {40, 15};
+		
+		ArraysActivity.calcOnArrays(intArray);
+		
+		
+		ContaEspecial contaEspecial = new ContaEspecial();
+		
+		contaEspecial.deposita(100);
+		
+		System.out.println(contaEspecial.getSaldo());
+		
+		contaEspecial.saque(50);
+
+		System.out.println(contaEspecial.getSaldo());
+		
+		System.out.println(contaEspecial.getTaxaBancaria(10));
 	}
 }
