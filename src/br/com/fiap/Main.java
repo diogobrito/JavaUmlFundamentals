@@ -79,12 +79,13 @@ public class Main {
 			System.out.println("Tudo certo para fatorial!");
 		}
 		
+		// Calculos de Array
 		int[] intArray = {40, 15};
 		
 		ArraysActivity.calcOnArrays(intArray);
 		
-		
-		ContaEspecial contaEspecial = new ContaEspecial();
+		// Manipulando contas
+		ContaEspecial contaEspecial = new ContaEspecial("nome", "endereco", "cpf");
 		
 		contaEspecial.deposita(100);
 		
@@ -95,5 +96,12 @@ public class Main {
 		System.out.println(contaEspecial.getSaldo());
 		
 		System.out.println(contaEspecial.getTaxaBancaria(10));
+		
+		Tributacao contaPoupT = new ContaPoupanca("nome", "end", "cpf");
+		
+		System.out.println(ClassificacaoCliente.POTENCIAL.isCompatible(contaEspecial));
+		
+//		System.out.println(ClassificacaoCliente.isCompatible(contaEspecial));
 	}
 }
+
