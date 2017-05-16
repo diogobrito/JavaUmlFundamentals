@@ -3,7 +3,7 @@ package br.com.fiap;
 public class Main {
 
 	public static void main(String[] args) {
-//		System.out.println("Ol� Mundo!");
+/*//		System.out.println("Ol� Mundo!");
 		Aluno aluno = new Aluno("diogo", 10);
 		
 		aluno.setCodigoAluno(10);
@@ -100,6 +100,21 @@ public class Main {
 		Tributacao contaPoupT = new ContaPoupanca("nome", "end", "cpf");
 		
 		System.out.println(ClassificacaoCliente.POTENCIAL.isCompatible(contaEspecial));
+		*/
+		ContaPoupanca cp = new ContaPoupanca("y", "x", "123");
+		ContaPoupanca cp1 = new ContaPoupanca("y", "x", "123");
+		
+		cp.setSaldo(1000);
+		
+		try {
+			cp.saque(1000);
+		} catch (ContaException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		//System.out.println(cp.equals(cp1));
+		
+		
 		
 //		System.out.println(ClassificacaoCliente.isCompatible(contaEspecial));
 	}

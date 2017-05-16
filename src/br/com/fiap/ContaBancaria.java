@@ -14,7 +14,7 @@ public class ContaBancaria {
 		this.cpfCliente = cpfCliente;
 	}
 
-	public void saque(double valor){
+	public void saque(double valor) throws ContaException{
 		saldo -= valor;
 	}
 
@@ -39,4 +39,38 @@ public class ContaBancaria {
 		
 		return getTaxaBancaria(qtdDias);
 	}
+
+	public String getNomeCliente() {
+		return nomeCliente;
+	}
+
+	public void setNomeCliente(String nomeCliente) {
+		this.nomeCliente = nomeCliente;
+	}
+
+	public String getEndCliente() {
+		return endCliente;
+	}
+
+	public void setEndCliente(String endCliente) {
+		this.endCliente = endCliente;
+	}
+
+	public String getCpfCliente() {
+		return cpfCliente;
+	}
+
+	public void setCpfCliente(String cpfCliente) {
+		this.cpfCliente = cpfCliente;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+	public void setTaxaBancaria(double taxaBancaria) {
+		this.taxaBancaria = taxaBancaria;
+	}
+	
+	
 }
