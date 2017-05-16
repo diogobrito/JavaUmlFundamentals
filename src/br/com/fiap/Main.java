@@ -1,5 +1,8 @@
 package br.com.fiap;
 
+import java.time.LocalDate;
+import java.time.Month;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -107,7 +110,7 @@ public class Main {
 		cp.setSaldo(1000);
 		
 		try {
-			cp.saque(1000);
+			cp.saque(1000, LocalDate.of(2000, Month.AUGUST, 23));
 		} catch (ContaException e) {
 			System.out.println(e.getMessage());
 		}

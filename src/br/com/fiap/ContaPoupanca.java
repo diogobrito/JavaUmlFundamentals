@@ -1,5 +1,9 @@
 package br.com.fiap;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
+
 public class ContaPoupanca extends ContaBancaria implements Tributacao{
 	public ContaPoupanca(String nomeCliente, String endCliente, String cpfCliente){
 		super(nomeCliente, endCliente, cpfCliente);
@@ -12,6 +16,16 @@ public class ContaPoupanca extends ContaBancaria implements Tributacao{
 		if( valor > saldo ){
 			throw new ContaException("Você não tem saldo sulficiente para essa operação.");
 		}
+	}
+	
+	public void saque(double valor, LocalDate dataAbertura) throws ContaException{
+		if(ChronoUnit.YEARS.between(dataAbertura, LocalDate.now()) > 0){
+			saldo -= valor;
+		}
+		else {
+			saldo -= valor - 0.10;
+		}
+		
 	}
 
 	@Override

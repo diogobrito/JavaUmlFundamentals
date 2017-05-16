@@ -1,11 +1,16 @@
 package br.com.fiap;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 public class ContaBancaria {
 	protected double saldo;
 	protected String nomeCliente;
 	protected String endCliente;
 	protected String cpfCliente;
 	protected double taxaBancaria = 1;
+	protected LocalDate dataNascimento;
+	protected LocalDate dataAberturaConta;
 
 	public ContaBancaria(String nomeCliente, String endCliente, String cpfCliente) {
 //		super();
@@ -17,6 +22,8 @@ public class ContaBancaria {
 	public void saque(double valor) throws ContaException{
 		saldo -= valor;
 	}
+	
+	
 
 	public void deposita(double valor){
 		saldo += valor;
