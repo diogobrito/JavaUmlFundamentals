@@ -141,7 +141,11 @@ public class Main {
 		System.out.println(testeLinked.get(950000));
 		 */
 		
-		
+		Cliente c1 = new Cliente();
+		Cliente c2 = new Cliente();
+		Cliente c3 = new Cliente();
+		Cliente c4 = new Cliente();
+		Cliente c5 = new Cliente();
 	}
 	
 }
