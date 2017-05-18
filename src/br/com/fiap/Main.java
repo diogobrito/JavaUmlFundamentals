@@ -1,7 +1,9 @@
 package br.com.fiap;
 
-import java.time.LocalDate;
-import java.time.Month;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Main {
 
@@ -103,7 +105,7 @@ public class Main {
 		Tributacao contaPoupT = new ContaPoupanca("nome", "end", "cpf");
 		
 		System.out.println(ClassificacaoCliente.POTENCIAL.isCompatible(contaEspecial));
-		*/
+		
 		ContaPoupanca cp = new ContaPoupanca("y", "x", "123");
 		ContaPoupanca cp1 = new ContaPoupanca("y", "x", "123");
 		
@@ -120,6 +122,27 @@ public class Main {
 		
 		
 //		System.out.println(ClassificacaoCliente.isCompatible(contaEspecial));
+	*/
+	
+		/*List<String> testeArray = new ArrayList();
+		
+		LinkedList<String> testeLinked = new LinkedList<String>();
+		
+		for(int i=0; i<=100000000; i++){
+			testeArray.add("ABC :" + i);
+			testeLinked.add("ABC :" + i);
+		}
+		
+		System.out.println(LocalDateTime.now() );
+		
+		System.out.println(testeArray.get(950000));
+
+		System.out.println(LocalDateTime.now() );
+		System.out.println(testeLinked.get(950000));
+		 */
+		
+		
 	}
+	
 }
 
