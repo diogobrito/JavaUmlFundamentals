@@ -1,9 +1,10 @@
 package br.com.fiap;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.attribute.BasicFileAttributes;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 
 public class Main {
 
@@ -139,13 +140,63 @@ public class Main {
 
 		System.out.println(LocalDateTime.now() );
 		System.out.println(testeLinked.get(950000));
-		 */
 		
 		Cliente c1 = new Cliente();
 		Cliente c2 = new Cliente();
 		Cliente c3 = new Cliente();
 		Cliente c4 = new Cliente();
 		Cliente c5 = new Cliente();
+		 */
+		
+		ArrayList<Cliente> listaCliente = new ArrayList<>();
+		
+		listaCliente.add(new Cliente("José", 35, LocalDateTime.of(2017, 1, 1, 10, 0, 0, 0)));
+		listaCliente.add(new Cliente("Maria", 40, LocalDateTime.of(1977, 1, 1, 10, 0, 0, 0)));
+		listaCliente.add(new Cliente("João", 55, LocalDateTime.of(1962, 1, 1, 10, 0, 0, 0)));
+		listaCliente.add(new Cliente("Paulo", 60, LocalDateTime.of(1957, 1, 1, 10, 0, 0, 0)));
+		listaCliente.add(new Cliente("Marco", 70, LocalDateTime.of(1947, 1, 1, 10, 0, 0, 0)));
+		
+		/*listaCliente.stream()
+		.filter(c -> 
+		Period.between(c.getPrimeiraCompra())
+		.getYears() > 5).forEach(c -> c.isClienteAtivo());
+		
+		ExemploThread t1 = new ExemploThread("T1");
+		ExemploThread t2 = new ExemploThread("T2");
+		ExemploThread t3 = new ExemploThread("T3");
+		ExemploThread t4 = new ExemploThread("T4");
+		ExemploThread t5 = new ExemploThread("T5");
+		
+		t1.start();
+		t2.start();
+		t3.start();
+		t4.start();
+		t5.start();
+		
+		Cavalo horse1 = new Cavalo("Galopeiro");
+		Cavalo horse2 = new Cavalo("MangaLarga");
+		Cavalo horse3 = new Cavalo("Forasteiro");
+		Cavalo horse4 = new Cavalo("Trovão");
+		Cavalo horse5 = new Cavalo("Relampago");
+		
+		Thread thread1 = new Thread(horse1);
+		thread1.start();
+		Thread thread2 = new Thread(horse2);
+		thread2.start();
+		Thread thread3 = new Thread(horse3);
+		thread3.start();
+		Thread thread4 = new Thread(horse4);
+		thread4.start();
+		Thread thread5 = new Thread(horse5);
+		thread5.start();
+		 */ 
+		
+		CopiarArquivos copia = new CopiarArquivos();
+		Path rootPath= Paths.get("C:/Windows");
+		
+		
+		//copia.visitFile(rootPath,  );
+		
 	}
 	
 }

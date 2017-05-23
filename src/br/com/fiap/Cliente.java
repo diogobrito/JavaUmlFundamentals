@@ -1,16 +1,27 @@
 package br.com.fiap;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Cliente {
 	private String numeroRG, numeroCPF, endereco, nome;
 	private int idade;
-	private boolean clienteAtivo;
-	private Date primeiraCompra;
+	private boolean clienteAtivo = true;
+	private LocalDateTime primeiraCompra;
 	
 	public Cliente(){
 		
 	}
+	
+	
+	
+	public Cliente(String nome, int idade, LocalDateTime primeiraCompra) {
+		super();
+		this.nome = nome;
+		this.idade = idade;
+		this.primeiraCompra = primeiraCompra;
+	}
+
+
 
 	public Cliente(String numeroRG){
 		this();
@@ -30,8 +41,9 @@ public class Cliente {
 	
 	
 	@Override
-	public String toString(){
-		return this.nome + this.clienteAtivo + this.primeiraCompra ;
+	public String toString() {
+		return "Cliente [nome=" + nome + ", idade=" + idade + ", clienteAtivo=" + clienteAtivo + ", primeiraCompra="
+				+ primeiraCompra + "]";
 	}
 
 	public String getNumeroRG() {
@@ -82,11 +94,11 @@ public class Cliente {
 		this.clienteAtivo = clienteAtivo;
 	}
 
-	public Date getPrimeiraCompra() {
+	public LocalDateTime getPrimeiraCompra() {
 		return primeiraCompra;
 	}
 
-	public void setPrimeiraCompra(Date primeiraCompra) {
+	public void setPrimeiraCompra(LocalDateTime primeiraCompra) {
 		this.primeiraCompra = primeiraCompra;
 	}
 	
